@@ -1,0 +1,171 @@
+[2018-07-12 14:44:08] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. SELECT
+         
+        a.id AS "id",a.username AS "username",a.password AS "password",a.type AS "type",a.phone AS "phone",a.email AS "email",a.city AS "city",a.street AS "street",a.apartment AS "apartment"
+     
+        FROM user a
+[2018-07-12 14:44:48] DEBUG 137 statementLog - {conn-210005, pstmt-220000} executed. SELECT
+         
+        a.id AS "id",a.username AS "username",a.password AS "password",a.type AS "type",a.phone AS "phone",a.email AS "email",a.city AS "city",a.street AS "street",a.apartment AS "apartment"
+     
+        FROM user a
+[2018-07-12 15:38:08] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. select a.id as "id", a.username as "username", a.password as "password", a.type as "type", a.phone as "phone"
+	, a.email as "email", a.city as "city", a.street as "street", a.apartment as "apartment"
+from user a
+where a.id = '2'
+[2018-07-12 15:38:53] DEBUG 137 statementLog - {conn-210005, pstmt-220000} executed. select a.id as "id", a.username as "username", a.password as "password", a.type as "type", a.phone as "phone"
+	, a.email as "email", a.city as "city", a.street as "street", a.apartment as "apartment"
+from user a
+where a.id = '2'
+[2018-07-12 15:39:38] DEBUG 137 statementLog - {conn-310005, pstmt-320000} executed. select a.id as "id", a.username as "username", a.password as "password", a.type as "type", a.phone as "phone"
+	, a.email as "email", a.city as "city", a.street as "street", a.apartment as "apartment"
+from user a
+where a.id = '2'
+[2018-07-12 15:40:15] DEBUG 137 statementLog - {conn-310005, pstmt-320001} executed. select a.id as "id", a.username as "username", a.password as "password", a.type as "type", a.phone as "phone"
+	, a.email as "email", a.city as "city", a.street as "street", a.apartment as "apartment"
+from user a
+where a.id = '2'
+[2018-07-12 15:40:23] DEBUG 137 statementLog - {conn-310005, pstmt-320002} executed. select a.id as "id", a.username as "username", a.password as "password", a.type as "type", a.phone as "phone"
+	, a.email as "email", a.city as "city", a.street as "street", a.apartment as "apartment"
+from user a
+where a.id = 'terrie'
+[2018-07-12 15:41:10] DEBUG 137 statementLog - {conn-610005, pstmt-620000} executed. select a.id as "id", a.username as "username", a.password as "password", a.type as "type", a.phone as "phone"
+	, a.email as "email", a.city as "city", a.street as "street", a.apartment as "apartment"
+from user a
+where a.id = 'terrie1000'
+[2018-07-12 15:42:39] DEBUG 137 statementLog - {conn-910005, pstmt-920000} executed. select a.id as "id", a.username as "username", a.password as "password", a.type as "type", a.phone as "phone"
+	, a.email as "email", a.city as "city", a.street as "street", a.apartment as "apartment"
+from user a
+where a.id = 'terrie1000'
+[2018-07-12 15:43:14] DEBUG 137 statementLog - {conn-1110005, pstmt-1120000} executed. SELECT
+         
+        a.id AS "id",a.username AS "username",a.password AS "password",a.type AS "type",a.phone AS "phone",a.email AS "email",a.city AS "city",a.street AS "street",a.apartment AS "apartment"
+     
+        FROM user a
+[2018-07-12 15:43:38] DEBUG 137 statementLog - {conn-1210005, pstmt-1220000} executed. SELECT
+         
+        a.id AS "id",a.username AS "username",a.password AS "password",a.type AS "type",a.phone AS "phone",a.email AS "email",a.city AS "city",a.street AS "street",a.apartment AS "apartment"
+     
+        FROM user a
+[2018-07-12 15:44:55] DEBUG 137 statementLog - {conn-1410005, pstmt-1420000} executed. SELECT
+         
+        a.id AS "id",a.username AS "username",a.password AS "password",a.type AS "type",a.phone AS "phone",a.email AS "email",a.city AS "city",a.street AS "street",a.apartment AS "apartment"
+     
+        FROM user a
+[2018-07-12 15:47:11] DEBUG 137 statementLog - {conn-1710005, pstmt-1720000} executed. SELECT
+         
+        a.id AS "id",a.username AS "username",a.password AS "password",a.type AS "type",a.phone AS "phone",a.email AS "email",a.city AS "city",a.street AS "street",a.apartment AS "apartment"
+     
+        FROM user a
+[2018-07-12 15:48:18] DEBUG 137 statementLog - {conn-2210005, pstmt-2220000} executed. SELECT
+         
+        a.id AS "id",a.username AS "username",a.password AS "password",a.type AS "type",a.phone AS "phone",a.email AS "email",a.city AS "city",a.street AS "street",a.apartment AS "apartment"
+     
+        FROM user a
+[2018-07-12 15:53:15] DEBUG 137 statementLog - {conn-3610005, pstmt-3620000} executed. select a.id as "id", a.username as "username", a.password as "password", a.type as "type", a.phone as "phone"
+	, a.email as "email", a.city as "city", a.street as "street", a.apartment as "apartment"
+from user a
+where a.id = 'terrie'
+[2018-07-12 15:53:26] DEBUG 137 statementLog - {conn-3610005, pstmt-3620001} executed. select a.id as "id", a.username as "username", a.password as "password", a.type as "type", a.phone as "phone"
+	, a.email as "email", a.city as "city", a.street as "street", a.apartment as "apartment"
+from user a
+where a.id = 'terrie1'
+[2018-07-12 15:53:30] DEBUG 137 statementLog - {conn-3610005, pstmt-3620002} executed. select a.id as "id", a.username as "username", a.password as "password", a.type as "type", a.phone as "phone"
+	, a.email as "email", a.city as "city", a.street as "street", a.apartment as "apartment"
+from user a
+where a.id = 'terrie2'
+[2018-07-12 15:53:33] DEBUG 137 statementLog - {conn-3610005, pstmt-3620003} executed. select a.id as "id", a.username as "username", a.password as "password", a.type as "type", a.phone as "phone"
+	, a.email as "email", a.city as "city", a.street as "street", a.apartment as "apartment"
+from user a
+where a.id = '2'
+[2018-07-12 16:06:39] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. select a.id as "id", a.name as "name"
+from user a
+where a.id = '2'
+[2018-07-12 16:09:55] DEBUG 137 statementLog - {conn-510005, pstmt-520000} executed. insert into user (id, name)
+values ('48b718e2cd724320933c020ff457a319', 'terrie')
+[2018-07-12 16:10:43] DEBUG 137 statementLog - {conn-510005, pstmt-520001} executed. update user
+set id = '48b718e2cd724320933c020ff457a319', name = 'terrie'
+where id = '48b718e2cd724320933c020ff457a319'
+[2018-07-12 16:14:25] DEBUG 137 statementLog - {conn-1010005, pstmt-1020000} executed. delete from user
+where id = '48b718e2cd724320933c020ff457a319'
+[2018-07-12 16:14:52] DEBUG 137 statementLog - {conn-1010005, pstmt-1020001} executed. update user
+set id = '48b718e2cd724320933c020ff457a319', name = 'terrie'
+where id = '48b718e2cd724320933c020ff457a319'
+[2018-07-12 16:19:47] DEBUG 137 statementLog - {conn-2610005, pstmt-2620000} executed. insert into user (id, name)
+values ('cac9c363d1e24cda8fb7b067de0b0308', 'terrie')
+[2018-07-12 16:19:59] DEBUG 137 statementLog - {conn-2610005, pstmt-2620001} executed. insert into user (id, name)
+values ('5eade92109684bfba51a485270a91030', 'terrie1')
+[2018-07-12 16:20:08] DEBUG 137 statementLog - {conn-2610005, pstmt-2620002} executed. SELECT
+         
+        a.id AS "id",
+        a.name AS "name"
+     
+        FROM user a
+[2018-07-12 16:20:48] DEBUG 137 statementLog - {conn-2710005, pstmt-2720000} executed. SELECT
+         
+        a.id AS "id",
+        a.name AS "name"
+     
+        FROM user a
+[2018-07-12 16:23:55] DEBUG 137 statementLog - {conn-3610005, pstmt-3620000} executed. SELECT
+         
+        a.id AS "id",
+        a.name AS "name"
+     
+        FROM user a
+[2018-07-12 18:34:05] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. SELECT
+         
+        a.id AS "id",
+        a.name AS "name"
+     
+        FROM user a
+[2018-07-12 18:34:18] DEBUG 137 statementLog - {conn-10005, pstmt-20001} executed. select a.id as "id", a.name as "name"
+from user a
+where a.id = 'terrie'
+[2018-07-12 18:34:23] DEBUG 137 statementLog - {conn-10005, pstmt-20002} executed. select a.id as "id", a.name as "name"
+from user a
+where a.id = '2'
+[2018-07-12 18:34:27] DEBUG 137 statementLog - {conn-10005, pstmt-20003} executed. select a.id as "id", a.name as "name"
+from user a
+where a.id = '1'
+[2018-07-12 18:45:15] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. select a.id as "id", a.name as "name"
+from user a
+where a.id = '1'
+[2018-07-12 18:45:18] DEBUG 137 statementLog - {conn-10005, pstmt-20001} executed. SELECT
+         
+        a.id AS "id",
+        a.name AS "name"
+     
+        FROM user a
+[2018-07-12 18:46:11] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. SELECT
+         
+        a.id AS "id",
+        a.name AS "name"
+     
+        FROM user a
+[2018-07-12 18:53:27] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. SELECT
+         
+        a.id AS "id",
+        a.name AS "name"
+     
+        FROM user a
+[2018-07-12 18:53:58] DEBUG 137 statementLog - {conn-10005, pstmt-20000} executed. SELECT
+         
+        a.id AS "id",
+        a.name AS "name"
+     
+        FROM user a
+[2018-07-12 18:58:06] DEBUG 137 statementLog - {conn-1110005, pstmt-1120000} executed. select a.id as "id", a.name as "name"
+from user a
+where a.id = '2'
+[2018-07-12 19:15:44] DEBUG 137 statementLog - {conn-1110005, pstmt-1120001} executed. SELECT
+         
+        a.id AS "id",
+        a.name AS "name"
+     
+        FROM user a
+[2018-07-12 19:17:01] DEBUG 137 statementLog - {conn-1110005, pstmt-1120002} executed. SELECT
+         
+        a.id AS "id",
+        a.name AS "name"
+     
+        FROM user a
