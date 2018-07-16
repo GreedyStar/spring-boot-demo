@@ -4,10 +4,13 @@
 
     <sql id="userColumns">
         a.id AS "id",
-        a.name AS "name"
+        a.name AS "name",
+        t.id AS "type.id",
+        t.name AS "type.name"
     </sql>
 
     <sql id="userJoins">
+        LEFT JOIN type t on a.tid = t.id
     </sql>
 
     <select id="get" resultType="cn.greedystar.springbootdemo.modules.entity.User">

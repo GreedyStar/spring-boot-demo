@@ -7,7 +7,8 @@ spring:
       driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://localhost:3306/spring-boot-demo?useUnicode=true&characterEncoding=utf8
       username: test
-      password: 43997k7k
+#      password: 43997k7k
+      password: CaYks2C7nfXL0rYtFag29XiCaG//f4A/wPjoMvYQDEeZJo/Vr3ZpFHMdeg75CeFQ5dvplmbSU0rGNn4wNGhJtw==
       # 初始化时建立的连接数
       initial-size: 5
       # 最大连接数
@@ -24,10 +25,15 @@ spring:
       validation-query: SELECT 'x'
       # 检测连接是否失效的超时时间，单位：秒
       validation-query-timeout: 2
-      filters: stat,wall,log4j2
+      filters: stat,wall,log4j2,config
+#      time-between-log-stats-millis: 60000
+      time-between-log-stats-millis: 10000
+#      connection-properties: config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAI0Q56HOXI2Z33kNpgOxvMbaE7BRUw0pZMLPZA0Pe+J/6R7Cq97BUCDygkzL7evUfQmPprNh6KKaSKXV0dBVghcCAwEAAQ==
       # Spring aop监控的包路径
       aop-patterns: cn.greedystar.springbootdemo.modules.service.*
       filter:
+        config:
+          enabled: true
         # 监控统计
         stat:
           enabled: true
