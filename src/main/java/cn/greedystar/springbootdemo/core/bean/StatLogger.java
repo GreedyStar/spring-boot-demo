@@ -1,4 +1,4 @@
-package cn.greedystar.springbootdemo.common;
+package cn.greedystar.springbootdemo.core.bean;
 
 import com.alibaba.druid.pool.DruidDataSourceStatLogger;
 import com.alibaba.druid.pool.DruidDataSourceStatLoggerAdapter;

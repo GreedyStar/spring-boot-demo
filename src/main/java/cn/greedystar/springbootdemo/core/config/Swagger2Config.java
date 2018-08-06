@@ -1,4 +1,4 @@
-package cn.greedystar.springbootdemo.core;
+package cn.greedystar.springbootdemo.core.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

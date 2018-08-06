@@ -1,12 +1,9 @@
-package cn.greedystar.springbootdemo.core;
+package cn.greedystar.springbootdemo.core.config;
 
-import cn.greedystar.springbootdemo.common.StatLogger;
+import cn.greedystar.springbootdemo.core.bean.JwtProperty;
+import cn.greedystar.springbootdemo.core.bean.StatLogger;
 import com.alibaba.druid.pool.DruidDataSource;
-import com.alibaba.druid.support.http.StatViewServlet;
-import com.alibaba.druid.support.http.WebStatFilter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -19,6 +16,7 @@ import java.util.Properties;
  */
 @Configuration
 public class DruidConfig {
+
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.druid")
     public DataSource druidDataSource() {

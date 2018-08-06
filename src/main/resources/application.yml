@@ -26,8 +26,7 @@ spring:
       # 检测连接是否失效的超时时间，单位：秒
       validation-query-timeout: 2
       filters: stat,wall,log4j2,config
-#      time-between-log-stats-millis: 60000
-      time-between-log-stats-millis: 10000
+      time-between-log-stats-millis: 604800000
 #      connection-properties: config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAI0Q56HOXI2Z33kNpgOxvMbaE7BRUw0pZMLPZA0Pe+J/6R7Cq97BUCDygkzL7evUfQmPprNh6KKaSKXV0dBVghcCAwEAAQ==
       # Spring aop监控的包路径
       aop-patterns: cn.greedystar.springbootdemo.modules.service.*
@@ -89,7 +88,25 @@ spring:
 # mybatis映射文件路径
 mybatis:
   mapper-locations: classpath*:mybatis/*Mapper.xml
+
 # 日志配置文件
 logging:
   config: classpath:log4j2.xml
+
+# 分页配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+# jwt自定义属性配置
+jwt:
+  config:
+    # 过期时间，单位：毫秒
+    expiry: 1800000
+    # 签发者
+    issuer: greedystar
+    # 密钥
+    base64Security: greedystar_base64Security
 
