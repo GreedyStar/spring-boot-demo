@@ -6,9 +6,8 @@ spring:
     druid:
       driver-class-name: com.mysql.jdbc.Driver
       url: jdbc:mysql://localhost:3306/spring-boot-demo?useUnicode=true&characterEncoding=utf8
-      username: test
-#      password: 43997k7k
-      password: CaYks2C7nfXL0rYtFag29XiCaG//f4A/wPjoMvYQDEeZJo/Vr3ZpFHMdeg75CeFQ5dvplmbSU0rGNn4wNGhJtw==
+      username: demo_admin
+      password: 43997k7k
       # 初始化时建立的连接数
       initial-size: 5
       # 最大连接数
@@ -91,7 +90,7 @@ mybatis:
 
 # 日志配置文件
 logging:
-  config: classpath:log4j2.xml
+  config: classpath:log4j2/log4j2.xml
 
 # 分页配置
 pagehelper:
@@ -104,7 +103,7 @@ pagehelper:
 jwt:
   config:
     # 过期时间，单位：毫秒
-    expiry: 1800000
+    expiry: 6000000
     # 签发者
     issuer: greedystar
     # 密钥

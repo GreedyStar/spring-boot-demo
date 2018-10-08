@@ -1,0 +1,8 @@
+author: GreedyStar
+packageName: com.greedystar.springbootdemo.modules
+path:
+    controller: web
+    service: service
+    dao: dao
+    entity: entity
+    mapper: mybatis
