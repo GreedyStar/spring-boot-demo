@@ -79,7 +79,6 @@ spring:
         login-password: admin
         allow:
         deny:
-
   # 设置cglib代理模式，防止非接口代理出错
   aop:
     proxy-target-class: true
@@ -91,21 +90,4 @@ mybatis:
 # 日志配置文件
 logging:
   config: classpath:log4j2/log4j2.xml
-
-# 分页配置
-pagehelper:
-  helper-dialect: mysql
-  reasonable: true
-  support-methods-arguments: true
-  params: count=countSql
-
-# jwt自定义属性配置
-jwt:
-  config:
-    # 过期时间，单位：毫秒
-    expiry: 6000000
-    # 签发者
-    issuer: greedystar
-    # 密钥
-    base64Security: greedystar_base64Security
 

@@ -19,7 +19,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @Configuration
 @EnableSwagger2
-@ComponentScan({"cn.greedystar.springbootdemo.modules.web"})
+@ComponentScan({"com.greedystar.springbootdemo.modules.web"})
 public class Swagger2Config {
     /**
      * 创建API应用
@@ -33,7 +33,7 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("cn.greedystar.springbootdemo.modules.web"))
+                .apis(RequestHandlerSelectors.basePackage("com.greedystar.springbootdemo.modules.web"))
                 .paths(PathSelectors.any())
                 .build();
     }

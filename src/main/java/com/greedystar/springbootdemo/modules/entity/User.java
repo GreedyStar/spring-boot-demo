@@ -1,21 +1,16 @@
 package com.greedystar.springbootdemo.modules.entity;
 
-import com.greedystar.springbootdemo.common.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
+import com.greedystar.springbootdemo.common.BaseEntity;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 /**
  * Author GreedyStar
  * Date  2018-07-11
  */
-public class User extends BaseEntity implements UserDetails {
+public class User extends BaseEntity {
     private static final long serialVersionUID = 1L;
     private String username;
     private String password;
@@ -25,7 +20,7 @@ public class User extends BaseEntity implements UserDetails {
         this.username = username;
     }
 
-    @Override
+
     public String getUsername() {
         return this.username;
     }
@@ -35,7 +30,6 @@ public class User extends BaseEntity implements UserDetails {
         this.password = password;
     }
 
-    @Override
     @JsonIgnore
     public String getPassword() {
         return this.password;
@@ -49,41 +43,4 @@ public class User extends BaseEntity implements UserDetails {
         this.roles = roles;
     }
 
-    @Override
-    @JsonIgnore
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        if (roles == null) {
-            return null;
-        }
-        // 将自定义的Role转换为Security的GrantedAuthority
-        List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        for (Role role : roles) {
-            authorities.add(new SimpleGrantedAuthority(role.getName()));
-        }
-        return authorities;
-    }
-
-    @Override
-    @JsonIgnore
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    @Override
-    @JsonIgnore
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-
-    @Override
-    @JsonIgnore
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-    @Override
-    @JsonIgnore
-    public boolean isEnabled() {
-        return true;
-    }
 }
