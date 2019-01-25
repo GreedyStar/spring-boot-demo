@@ -6,3 +6,5 @@ Springboot+mybatis+druid种子项目
 [SpringBoot学习笔记【二】Druid 监控记录持久化 + 数据库密码加密](https://blog.csdn.net/greedystar/article/details/81055485)
 
 [SpringBoot学习笔记【三】整合 Security + JWT + 异常处理](https://blog.csdn.net/greedystar/article/details/81220070)
+
+[SpringBoot学习笔记【四】多数据源配置](https://blog.csdn.net/greedystar/article/details/85230576)
