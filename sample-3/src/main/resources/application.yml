@@ -1,0 +1,24 @@
+server:
+  port: 8802
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/spring-boot-demo?useUnicode=true&characterEncoding=utf8
+      username: root
+      password:
+
+# mybatis映射文件路径
+mybatis:
+  mapper-locations: classpath*:mappers/*Mapper.xml
+
+# jwt自定义属性配置
+jwt:
+  config:
+    # 过期时间，单位：毫秒
+    expiry: 6000000
+    # 签发者
+    issuer: greedystar
+    # 密钥
+    base64Security: greedystar_base64Security

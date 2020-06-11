@@ -1,0 +1,12 @@
+db:
+  url: jdbc:mysql://localhost:3306/spring-boot-demo
+  username: root
+  password:
+author: GreedyStar
+packageName: com.greedystar.sample3
+path:
+  controller: web
+  service: service
+  dao: dao
+  entity: entity
+  mapper: mappers
