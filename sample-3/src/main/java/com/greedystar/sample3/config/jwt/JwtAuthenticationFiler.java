@@ -2,7 +2,12 @@ package com.greedystar.sample3.config.jwt;
 
 import com.alibaba.fastjson.JSON;
 import com.greedystar.sample3.entity.ResponseEntity;
+import com.greedystar.sample3.service.UserService;
 import io.jsonwebtoken.Claims;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -20,9 +25,11 @@ import java.util.Date;
  */
 public class JwtAuthenticationFiler extends OncePerRequestFilter {
     private JwtProperty jwtProperty;
+    private UserService userService;
 
-    public JwtAuthenticationFiler(JwtProperty jwtProperty) {
+    public JwtAuthenticationFiler(JwtProperty jwtProperty, UserService userService) {
         this.jwtProperty = jwtProperty;
+        this.userService = userService;
     }
 
     @Override
@@ -56,6 +63,14 @@ public class JwtAuthenticationFiler extends OncePerRequestFilter {
         if (StringUtils.isEmpty(claims.get("phone"))) {
             httpServletResponse.getWriter().write(JSON.toJSONString(new ResponseEntity.Builder().setStatus(403).setMessage("Invalid token").build()));
             return;
+        }
+        // 上述验证全部通过后，基于token在security上下文中保存登录状态
+        UserDetails userDetails = userService.loadUserByUsername(claims.get("phone").toString());
+        if (userDetails != null) {
+            UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, userDetails.getPassword(), userDetails.getAuthorities());
+            authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpServletRequest));
+            // 设置为已登录
+            SecurityContextHolder.getContext().setAuthentication(authentication);
         }
         filterChain.doFilter(httpServletRequest, httpServletResponse);
     }
