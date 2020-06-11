@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.greedystar.sample4.sys.dao.RoleDao">
+
+    <resultMap id="roleResultMap" type="com.greedystar.sample4.sys.entity.Role">
+        <id column="id" property="id"/> 
+        <result column="name" property="name"/> 
+
+        
+        
+    </resultMap>
+
+    <sql id="roleColumns">
+        role.id AS "id",
+        role.name AS "name"
+    </sql>
+
+    <sql id="roleJoins">
+        
+    </sql>
+
+    <select id="get" resultMap="roleResultMap">
+        SELECT
+        <include refid="roleColumns" />
+        FROM role <include refid="roleJoins" />
+        <where>
+        role.id = #{id}
+        </where>
+    </select>
+
+    <select id="findList" resultMap="roleResultMap">
+        SELECT
+        <include refid="roleColumns" />
+        FROM role <include refid="roleJoins" />
+        <where>
+        </where>
+    </select>
+
+    <select id="findAllList" resultMap="roleResultMap">
+        SELECT
+        <include refid="roleColumns" />
+        FROM role <include refid="roleJoins" />
+        <where>
+        </where>
+    </select>
+
+    <insert id="insert">
+        INSERT INTO role(
+            id,
+            name
+        )
+        VALUES (
+            #{id},
+            #{name}
+        )
+    </insert>
+
+    <insert id="insertBatch">
+        INSERT INTO role(
+            id,
+            name
+        )
+        VALUES
+        <foreach collection ="list" item="role" separator =",">
+        (
+            #{role.id},
+            #{role.name}
+        )
+        </foreach>
+    </insert>
+
+    <update id="update">
+        UPDATE role SET
+        id = #{id},
+        name = #{name}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        DELETE FROM role
+        WHERE id = #{id}
+    </update>
+
+</mapper>

@@ -10,6 +10,7 @@
         <module>sample-1</module>
         <module>sample-2</module>
         <module>sample-3</module>
+        <module>sample-4</module>
     </modules>
     <packaging>pom</packaging>
 
