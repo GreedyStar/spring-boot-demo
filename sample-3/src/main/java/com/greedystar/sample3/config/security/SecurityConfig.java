@@ -90,6 +90,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         web.ignoring().antMatchers("/**/*.gif", "/**/*.png", "/**/*.jpg", "/**/*.html", "/**/*.js", "/**/*.css", "/**/*.ico", "/webjars/**");
         // 注册请求
         web.ignoring().mvcMatchers("/user/signup");
+        // 放行GET请求
         web.ignoring().antMatchers(HttpMethod.GET, "/**/***");
     }
 }
