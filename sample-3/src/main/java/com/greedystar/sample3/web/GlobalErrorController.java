@@ -14,8 +14,12 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 /**
+ * 全局错误处理
+ * SpringBoot默认会将异常映射到/error路径，从而根据请求方式返回html或json
+ * 在这个控制器中处理/error路径的请求，将所有异常的返回值进行统一处理
+ * <p>
  * Author GreedyStar
- * Date   2020-6-11
+ * Date   2020/6/11
  */
 @RestController
 public class GlobalErrorController implements ErrorController {
