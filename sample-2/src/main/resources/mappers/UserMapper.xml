@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.greedystar.sample2.dao.UserDao">
+
+    <resultMap id="userResultMap" type="com.greedystar.sample2.entity.User">
+        <id column="id" property="id"/> 
+        <result column="name" property="name"/> 
+        <result column="phone" property="phone"/> 
+        <result column="email" property="email"/> 
+
+        
+        
+    </resultMap>
+
+    <sql id="userColumns">
+        user.id AS "id",
+        user.name AS "name",
+        user.phone AS "phone",
+        user.email AS "email"
+    </sql>
+
+    <sql id="userJoins">
+        
+    </sql>
+
+    <select id="get" resultMap="userResultMap">
+        SELECT
+        <include refid="userColumns" />
+        FROM user <include refid="userJoins" />
+        <where>
+        user.id = #{id}
+        </where>
+    </select>
+
+    <select id="findList" resultMap="userResultMap">
+        SELECT
+        <include refid="userColumns" />
+        FROM user <include refid="userJoins" />
+        <where>
+        </where>
+    </select>
+
+    <select id="findAllList" resultMap="userResultMap">
+        SELECT
+        <include refid="userColumns" />
+        FROM user <include refid="userJoins" />
+        <where>
+        </where>
+    </select>
+
+    <insert id="insert">
+        INSERT INTO user(
+            id,
+            name,
+            phone,
+            email
+        )
+        VALUES (
+            #{id},
+            #{name},
+            #{phone},
+            #{email}
+        )
+    </insert>
+
+    <insert id="insertBatch">
+        INSERT INTO user(
+            id,
+            name,
+            phone,
+            email
+        )
+        VALUES
+        <foreach collection ="list" item="user" separator =",">
+        (
+            #{user.id},
+            #{user.name},
+            #{user.phone},
+            #{user.email}
+        )
+        </foreach>
+    </insert>
+
+    <update id="update">
+        UPDATE user SET
+        id = #{id},
+        name = #{name},
+        phone = #{phone},
+        email = #{email}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        DELETE FROM user
+        WHERE id = #{id}
+    </update>
+
+</mapper>
