@@ -1,0 +1,88 @@
+server:
+  port: 8800
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/spring-boot-demo?useUnicode=true&characterEncoding=utf8
+      username: root
+      password:
+      # 初始化时建立的连接数
+      initial-size: 5
+      # 最大连接数
+      max-active: 20
+      # 最小连接数
+      min-idle: 5
+      # 获取连接最大等待时间，单位：毫秒
+      max-wait: 2000
+      # 是否缓存preparedStatement
+      pool-prepared-statements: false
+      # 最大preparedStatement缓存数，当pool-prepared-statements=true时需要大于0
+      max-pool-prepared-statement-per-connection-size: -1
+      # 检测连接是否失效的sql
+      validation-query: SELECT 'x'
+      # 检测连接是否失效的超时时间，单位：秒
+      validation-query-timeout: 2
+      filters: stat,wall,log4j2
+      # Spring aop监控的包路径
+      aop-patterns: cn.greedystar.springbootdemo.modules.service.*
+      filter:
+        # 监控统计
+        stat:
+          enabled: true
+          db-type: mysql
+          # 打印慢sql
+          log-slow-sql: true
+          # 超过200毫秒即为慢sql
+          slow-sql-millis: 200
+        # sql防火墙
+        wall:
+          enabled: true
+          db-type: mysql
+          # 对认定的攻击sql进行日志输出
+          log-violation: true
+          # 对认定的攻击sql抛出异常
+          throw-exception: true
+          config:
+            # 是否允许下述操作
+            alter-table-allow: false
+            truncate-allow: false
+            drop-table-allow: false
+            update-where-none-check: true
+            # metadata会暴露数据的表结构
+            metadata-allow: false
+        # 日志
+        log4j2:
+          enabled: true
+          # log4j2仅记录druid的sql执行日志
+          statement-log-enabled: false
+          connection-log-enabled: false
+          result-set-log-enabled: false
+          statement-executable-sql-log-enable: true
+      # 数据库连接池监控统计插件
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        # 过滤掉如下请求
+        exclusions: '*.gif,*.png,*.jpg,*.html,*.js,*.css,*.ico,/druid/*'
+      # 数据库连接池监控页面插件
+      stat-view-servlet:
+        enabled: true
+        url-pattern: '/druid/*'
+        reset-enable: true
+        login-username: admin
+        login-password: admin
+        allow:
+        deny:
+
+  # 设置cglib代理模式，防止非接口代理出错
+  aop:
+    proxy-target-class: true
+
+# mybatis映射文件路径
+mybatis:
+  mapper-locations: classpath*:mappers/*Mapper.xml
+# 日志配置文件
+logging:
+  config: classpath:log/log4j2.xml
