@@ -31,7 +31,7 @@
         <mybatis.starter.version>1.3.2</mybatis.starter.version>
         <druid.starter.version>1.1.10</druid.starter.version>
         <fastjson.version>1.2.25</fastjson.version>
-        <mysql.driver.version>5.1.46</mysql.driver.version>
+        <mysql.driver.version>8.0.16</mysql.driver.version>
         <swagger.version>2.2.2</swagger.version>
         <generator.version>1.3.0</generator.version>
     </properties>
